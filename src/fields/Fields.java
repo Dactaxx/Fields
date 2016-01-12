@@ -9,8 +9,9 @@ import java.util.Scanner;
 public class Fields {
 	public static LinkedList<Person> data = new LinkedList<Person>();
 	
-	public static void main(String[] args) {
-		Window.createWindow();
+	public static void main(String[] args) throws IOException {
+		//Window.createWindow();
+		readData();
 		
 	}
 	
@@ -26,8 +27,14 @@ public class Fields {
 				break;
 				
 			}
+			System.out.println(person.name);
 
 		}
+		
+	}
+	
+	public static void writeData(String name, double color) {
+		
 		
 	}
 	
