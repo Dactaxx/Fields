@@ -16,7 +16,18 @@ public class Fields {
 	
 	public static void readData() throws IOException {
 		Scanner in = new Scanner(new FileReader(new File("data/data.txt")));
-		
+		while(in.hasNextLine()) {
+			String line = in.nextLine();
+			Person person = new Person();
+			switch(line) {
+				case "name" :
+				person.name = in.nextLine();
+				data.add(person);
+				break;
+				
+			}
+
+		}
 		
 	}
 	
