@@ -1,7 +1,9 @@
 package fields;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -33,8 +35,13 @@ public class Fields {
 		
 	}
 	
-	public static void writeData(String name, double color) {
+	public static void writeData(String name, double color) throws IOException {
+		Person person = new Person();
+		person.name = name;
+		person.color = color;
+		data.add(person);
 		
+		BufferedWriter writer = new BufferedWriter(new FileWriter(new File("data/data.txt")));
 		
 	}
 	
