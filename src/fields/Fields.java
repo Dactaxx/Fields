@@ -20,7 +20,7 @@ public class Fields {
 			
 		}
 		
-		writeData(Dillan)
+
 		
 		for(int i = 0; i < data.size(); i++) {
 			System.out.println(data.get(i).name + " - " + data.get(i).color);
