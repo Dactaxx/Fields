@@ -5,6 +5,9 @@ public class Person {
 	public double color, introvert, outdoors;
 	
 	public Person() {
+		this.color = -1;
+		this.introvert = -1;
+		this.outdoors = -1;
 		
 	}
 	

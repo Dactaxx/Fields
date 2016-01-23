@@ -59,20 +59,33 @@ public class Fields {
 		data.add(person);
 		
 		Scanner in = new Scanner(new FileReader(new File("data/data.txt")));
-		ArrayList<String> lnlist = new ArrayList<String>();
+		ArrayList<String> writelist = new ArrayList<String>();
+		
+		for(int i = 0; i < data.size(); i++) {
+			writelist.add("#");
+			writelist.add(data.get(i).name);
+			
+			if(data.get(i).color != -1) {
+				writelist.add("color");
+				writelist.add(Double.toString(data.get(i).color));
+				
+			}
+			
+		}
 		
 		while(in.hasNextLine()) {
-			lnlist.add(in.nextLine());
+			writelist.add(in.nextLine());
 			
 		}
 		
 		BufferedWriter writer = new BufferedWriter(new FileWriter(new File("data/data.txt")));
 		
-		for(int i = 0; i < lnlist.size(); i++) {
-			writer.write(lnlist.get(i));
+		for(int i = 0; i < writelist.size(); i++) {
+			writer.write(writelist.get(i));
 			writer.newLine();
 			
 		}
+		
 		writer.write("#");
 		writer.newLine();
 		writer.write(name);
